@@ -13,7 +13,7 @@ export default function Header(){
         </div>
             <div className="w-full h-10 bg-[#e4b75c] shadow-2xl flex justify-center items-center uppercase gap-32 underline">
                 <a href="/"><h1>Início</h1></a>
-                <a href="/predicao"><h1>Predição</h1></a>
+                <a href="/predict"><h1>Predição</h1></a>
         </div>
         </>
     )
