@@ -1,7 +1,9 @@
 export default function Home() {
   return (
     <>
-    <h1>tela de inicio</h1>
+    <div className="w-full h-screen">
+
+    </div>
     </>
   );
 }
