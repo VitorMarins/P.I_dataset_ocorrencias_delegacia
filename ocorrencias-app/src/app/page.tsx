@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface ProjectSectionProps {
   title: string;
   children: React.ReactNode;
@@ -58,15 +57,12 @@ function ValueCard({icon, title, description}: {icon: string, title: string, des
 }
 
 
-// --- Componente Principal ---
-
 export default function Home() {
   return (
     <>
       <div className="w-full min-h-screen p-4 sm:p-8">
         <div className="max-w-4xl mx-auto">
           
-          {/* Cabeçalho */}
           <header className="text-center py-10 border-b-2 border-slate-200 dark:border-gray-700 mb-10">
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">
               Sistema Preditivo de Ocorrências de Latrocínio para Patrulhamento Estratégico
@@ -76,7 +72,6 @@ export default function Home() {
             </p>
           </header>
 
-          {/* Corpo do Documento */}
           <ProjectSection title="1. História de Dados e Justificativa">
             <p>
               A segurança pública é um desafio constante que exige a otimização contínua dos recursos disponíveis. Atualmente, as estratégias de patrulhamento e alocação de efetivo da Polícia Civil são, em grande parte, reativas, baseadas em dados históricos e na experiência dos agentes.
@@ -140,12 +135,32 @@ export default function Home() {
                 url="https://jc.uol.com.br/colunas/seguranca/2025/02/05/pernambuco-soma-286-mortes-violentas-em-janeiro-de-2025-queda-de-194.html"
               />
           </ProjectSection>
-          
-          <footer className="text-center mt-20 py-6 border-t border-slate-200 dark:border-gray-700">
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              Projeto Integrador &copy; {new Date().getFullYear()}
+
+          <ProjectSection title="5. Equipe">
+            <p>
+                Este projeto foi idealizado e desenvolvido pela seguinte equipe:
             </p>
-          </footer>
+            <ul className="list-disc list-inside space-y-3 mt-4">
+                <li>
+                    <span className="font-semibold">André Luiz</span>
+                </li>
+                <li>
+                    <span className="font-semibold">Carla Romero</span>
+                </li>
+                <li>
+                    <span className="font-semibold">Gabriela Pires</span>
+                </li>
+                <li>
+                    <span className="font-semibold">Lucas Emmanoel</span>
+                </li>
+                <li>
+                    <span className="font-semibold">Rafael Moura</span>
+                </li>
+                <li>
+                    <span className="font-semibold">Vitor Marins</span>
+                </li>
+            </ul>
+          </ProjectSection>
 
         </div>
       </div>
