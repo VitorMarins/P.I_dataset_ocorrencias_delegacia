@@ -6,7 +6,7 @@ import NewsReference from './_components/newsReference/newsReference';
 export default function HomePage() {
   return (
     <>
-      <div className="w-full min-h-screen p-4 sm:p-8">
+      <div className="w-full min-h-screen mt-10 p-4 sm:p-8">
         <div className="max-w-4xl mx-auto">
           <header className="text-center py-10 border-b-2 border-slate-200 dark:border-gray-700 mb-10">
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gra
@@ -80,32 +80,6 @@ export default function HomePage() {
               source="Jornal do Commercio"
               url="https://jc.uol.com.br/colunas/seguranca/2025/02/05/pernambuco-soma-286-mortes-violentas-em-janeiro-de-2025-queda-de-194.html"
             />
-          </ProjectSection>
-
-          <ProjectSection title="5. Equipe">
-            <p>
-              Este projeto foi idealizado e desenvolvido pela seguinte equipe:
-            </p>
-            <ul className="list-disc list-inside space-y-3 mt-4">
-              <li>
-                <span className="font-semibold">André Luiz</span>
-              </li>
-              <li>
-                <span className="font-semibold">Carla Romero</span>
-              </li>
-              <li>
-                <span className="font-semibold">Gabriela Pires</span>
-              </li>
-              <li>
-                <span className="font-semibold">Lucas Emmanoel</span>
-              </li>
-              <li>
-                <span className="font-semibold">Rafael Moura</span>
-              </li>
-              <li>
-                <span className="font-semibold">Vitor Marins</span>
-              </li>
-            </ul>
           </ProjectSection>
         </div>
       </div>
