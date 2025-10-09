@@ -1,27 +1,26 @@
 // src/services/prosService.ts
 
-interface YearSummary {
+export interface YearSummary {
     year: number;
-    bairro: string;
-    include_predictions: boolean;
+    bairros: string[];
+    data: {
+        bairro: string;
+        month: number;
+        value: number;
+    }[];
 }
 
 export async function getServerPros(
     params: Record<string, string> = {}
 ): Promise<YearSummary | null> {
     try {
-        
         const query = new URLSearchParams({
-            year: "2025",
-            bairro: "Boa Viagem",
-            include_predictions: "true",
+            value_type: "observed", 
             ...params,
         }).toString();
 
-        const res = await fetch(
-            `https://api-pi-s9mk.onrender.com/year/summary?${query}`,
-            { cache: "no-store" }
-        );
+        const url = `https://api-pi-s9mk.onrender.com/year/summary?${query}`;
+        const res = await fetch(url, { cache: "no-store" });
 
         if (!res.ok) {
             throw new Error(`Erro ${res.status}: ${res.statusText}`);
