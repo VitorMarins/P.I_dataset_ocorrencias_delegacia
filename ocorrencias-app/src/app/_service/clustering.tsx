@@ -2,6 +2,7 @@
 export interface PCAData {
     pca1: number[];
     pca2: number[];
+    cluster: number[];
 }
 
 export async function getPCAData(params: Record<string, string> = {}): Promise<PCAData | null> {
@@ -17,7 +18,12 @@ export async function getPCAData(params: Record<string, string> = {}): Promise<P
 
         const data = await res.json();
 
-        if (!data || !Array.isArray(data.pca1) || !Array.isArray(data.pca2)) {
+        if (
+            !data ||
+            !Array.isArray(data.pca1) ||
+            !Array.isArray(data.pca2) ||
+            !Array.isArray(data.cluster)
+        ) {
             console.error("Dados da API em formato inesperado:", data);
             return null;
         }
@@ -25,6 +31,7 @@ export async function getPCAData(params: Record<string, string> = {}): Promise<P
         return {
             pca1: data.pca1,
             pca2: data.pca2,
+            cluster: data.cluster,
         };
     } catch (error) {
         console.error("Erro ao buscar dados do PCA:", error);
