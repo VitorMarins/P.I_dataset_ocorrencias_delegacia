@@ -19,9 +19,6 @@ const bairros = [
     "Pina",
 ];
 
-// ... resto do código permanece igual
-
-
 export default function Frequency() {
     const currentYear = new Date().getFullYear();
     const [year, setYear] = useState<number>(currentYear);
