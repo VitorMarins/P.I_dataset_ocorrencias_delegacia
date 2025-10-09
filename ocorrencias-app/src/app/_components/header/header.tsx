@@ -28,6 +28,10 @@ export default function Header(){
                             <Image src={'/assets/img/predictIcon.png'} width={22} height={22} alt="icone predicao" />
                             <span className="font-semibold">Predições</span>
                         </a>
+                        <a href="/clustering" className="flex items-center gap-2 text-black hover:opacity-80">
+                            <Image src={'/assets/img/predictIcon.png'} width={22} height={22} alt="icone predicao" />
+                            <span className="font-semibold">Clustering</span>
+                        </a>
                     </nav>
                 </div>
             </div>
