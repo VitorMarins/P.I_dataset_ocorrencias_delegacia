@@ -93,27 +93,27 @@ export default function ClusteringChart() {
 
   return (
     <div className="w-full min-h-screen gap-8 ">
-      <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-black mt-20">2. Tela de clusterização</h1>
+      <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-black">2. Tela de clusterização</h1>
       {/* Painel de filtros */}
-      <div className="w-full flex flex-col p-4 md:p-12 gap-8 justify-center items-center">
+      <div className="mt-10">
         <div className="w-full md:w-1/2">
-          <label htmlFor="ano">Escolha o ano</label>
+          <label htmlFor="ano" className="text-base font-bold">Escolha o ano</label>
           <input
                         id="ano"
                         type="text"
                         readOnly
                         value={year}
                         onClick={() => setIsYearModalOpen(true)}
-                        className="w-full border border-gray-300 p-3 md:p-5 rounded text-black cursor-pointer bg-white"
+                        className="w-full border border-gray-300 p-3 md:p-5 mt-4 rounded text-black cursor-pointer bg-white"
                     />  
         </div>
       </div>
 
       {/* Gráfico */}
-      <div className="w-full h-1/2 md:h-screen flex justify-center items-center p-4 md:p-12">
+      <div className="w-full h-1/2 mt-5">
         {scatterData ? (
           <div className="w-full h-2/3">
-            <Scatter data={scatterData} options={options} />
+            <Scatter className="my-10" data={scatterData} options={options} />
           </div>
         ) : (
           <div className="w-full h-auto flex justify-center items-center ">
