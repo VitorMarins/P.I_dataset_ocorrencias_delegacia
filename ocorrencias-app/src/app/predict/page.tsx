@@ -13,6 +13,7 @@ import {
 } from "chart.js";
 import { getServerPros } from "../_service/api";
 import ClusteringChart from "../_components/clusteringChart/ClusteringChart";
+import FrequencyHeatmap from "../_components/frequencyHeatmap/FrequencyHeatmap";
 
 ChartJS.register(LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend, Filler);
 
@@ -243,8 +244,10 @@ export default function Predicao() {
                 </div>
             )}
         </div>
-        <ClusteringChart />
-      
+        <div style={{marginTop: "-12rem"}}>
+            <FrequencyHeatmap/>
+            <ClusteringChart/>
+        </div>
         </div>
     );
 }

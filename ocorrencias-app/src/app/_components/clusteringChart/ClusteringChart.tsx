@@ -93,7 +93,7 @@ export default function ClusteringChart() {
 
   return (
     <div className="w-full min-h-screen gap-8 ">
-      <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-black">2. Tela de clusterização</h1>
+      <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-black">3. Tela de clusterização</h1>
       {/* Painel de filtros */}
       <div className="mt-10">
         <div className="w-full md:w-1/2">
@@ -110,10 +110,10 @@ export default function ClusteringChart() {
       </div>
 
       {/* Gráfico */}
-      <div className="w-full h-1/2 mt-5">
+      <div className="w-full mt-5">
         {scatterData ? (
-          <div className="w-full h-2/3">
-            <Scatter className="my-10" data={scatterData} options={options} />
+          <div className="w-full h-[360px] md:h-[560px]">
+            <Scatter data={scatterData} options={options} />
           </div>
         ) : (
           <div className="w-full h-auto flex justify-center items-center ">
