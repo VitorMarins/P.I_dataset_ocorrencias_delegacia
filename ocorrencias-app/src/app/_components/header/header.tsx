@@ -28,8 +28,8 @@ export default function Header(){
                     }}
                 />
 
-                <div className="absolute -bottom-6 z-[30] left-1/2 -translate-x-1/2 lg:left-auto lg:right-8 lg:translate-x-0">
-                    <nav className="bg-white rounded-3xl flex items-center px-4 py-2 gap-4 text-sm md:px-6 md:py-3 md:gap-8 md:text-base xl:px-8 xl:py-4 xl:gap-12 xl:text-lg">
+                <div className="absolute -bottom-6 z-[30] left-1/2 -translate-x-1/2 lg:left-auto lg:right-0 lg:translate-x-0 ">
+                    <nav className="bg-white rounded-3xl flex items-center px-4 py-2 gap-4 text-sm md:px-6 md:py-3 md:gap-8 md:text-base xl:px-8 xl:py-4 xl:gap-12 xl:text-lg p-30">
                         <a href="/" className="flex items-center gap-2 text-black hover:opacity-80">
                             <FiHome size={22} />
                             <span className="font-semibold">Home</span>

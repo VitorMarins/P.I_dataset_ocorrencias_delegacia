@@ -42,6 +42,7 @@ export default function Footer(){
                 </ul>
 
                 <hr className="mt-8  border-white" />
+                <p className=" text-center mt-2 text-sm text-gray-200">© {new Date().getFullYear()} Projeto Senac para Polícia Civil de Pernambuco</p>
             </div>
         </footer>
     );

@@ -4,21 +4,42 @@ interface newsReferenceProps {
   date: string;
   title: string;
   source: string;
-  url: string;
+  imageSrc?: string; 
+  summary?: string;  
+  href?: string;
 }
 
-export default function NewsReference({ date, title, source, url }: newsReferenceProps) {
+export default function NewsReference({ date, title, source, imageSrc, summary, href }: newsReferenceProps) {
   return (
     <a
-      href={url}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="block p-4 my-4 bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-lg hover:shadow-lg hover:border-sky-500 transition-all duration-300"
+      className="group block my-6 bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
     >
-      <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">{date}</p>
-      <h4 className="font-bold text-gray-800 dark:text-white my-1">{title}</h4>
-      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-        Fonte: {source} <span className="ml-2">🔗</span>
+      <div className="w-full h-48 sm:h-56 bg-slate-100 overflow-hidden">
+        <img
+          src={imageSrc}
+          alt={title}
+          className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+          loading="lazy"
+        />
+      </div>
+
+      <div className="p-5">
+        <h4 className="font-extrabold text-gray-900 leading-snug">
+          {title}
+        </h4>
+        <p className="mt-3 text-sm text-gray-500">{date}</p>
+        {summary && (
+          <p className="mt-3 text-[15px] leading-relaxed text-gray-700">
+            {summary}
+          </p>
+        )}
+        <div className="mt-4 text-sm text-gray-500">
+          Fonte: {source}
+          <span className="ml-2 inline-block text-gray-400 group-hover:text-gray-600">↗</span>
+        </div>
       </div>
     </a>
   );
