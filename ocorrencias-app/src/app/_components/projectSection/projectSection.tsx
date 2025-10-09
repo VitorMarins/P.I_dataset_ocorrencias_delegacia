@@ -7,13 +7,11 @@ interface projectSectionProps {
 
 export default function projectSection({ title, children }: projectSectionProps) {
   return (
-    <section className="mb-12">
-      <h2 className="text-3xl font-bold text-black dark:text-black pb-2 mb-6">
+    <section className="mb-12 max-w-4xl mx-auto">
+      <h2 className="text-xl font-extrabold text-black dark:text-black pb-2 mb-6">
         {title}
       </h2>
-      <div className="prose prose-lg dark:prose-invert max-w-none text-lg leading-relaxed">
-        {children}
-      </div>
+      {children}
     </section>
   );
 }
